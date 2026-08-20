@@ -4,9 +4,9 @@
 
 **Tipo:** módulos por feature (vertical slice) con capas internas.
 
-- Todo el dominio vive en `src/features/movimientos/`: tipos, utils, hook y componentes de la pantalla.
+- Todo el dominio vive en `src/features/movements/`: tipos, utils, hook y componentes de la pantalla.
 - **Componentes** — solo presentación (markup, BEM, callbacks).
-- **Hooks** — estado y orquestación (`useMovimientosPage`).
+- **Hooks** — estado y orquestación (`useMovementsPage`).
 - **Utils** — lógica pura (parseo del JSON, resumen mensual, actualizar categoría).
 - **Utils globales** — solo lo compartido de verdad (`src/utils/formatCurrency.ts`).
 - Imports directos; sin barrel files ni capas extra (services, repositories, store global).
@@ -27,7 +27,7 @@ _Lo que el requerimiento no decía y resolviste por tu cuenta._
 
 _El JSON no viene limpio. ¿Qué venía mal y qué hiciste al respecto?_
 
-- **No confío en la forma del export.** Tipé un `MovimientoRaw`, valido el archivo en `parseMovimientosFile` y normalizo cada registro a `Movimiento` antes de que llegue a React. Fechas inválidas o montos no numéricos lanzan error temprano.
+- **No confío en la forma del export.** Tipé un `MovementRaw`, valido el archivo en `parseMovementsFile` y normalizo cada registro a `Movement` antes de que llegue a React. Fechas inválidas o montos no numéricos lanzan error temprano.
 - **Categorías faltantes** (`null` o `""`, p. ej. Spotify, OXXO, cargo en disputa) → `normalizeCategory` las mapea a «Sin categoría», marca `needsCategoryReview: true`, las subo al inicio de la lista y muestro badge + aviso en el resumen.
 - **Categorías mal asignadas** (p. ej. Didi en «Salud») → no las corrijo en el parseo; el usuario las arregla con el selector. Ese es el segundo requisito del reto.
 - **Montos inconsistentes** — mezcla de `number` y `string` (`"1876.40"`), decimales y un cargo de `$0` → `parseAmountToCents` unifica todo a centavos enteros; el monto cero no entra a ingresos ni gastos.
