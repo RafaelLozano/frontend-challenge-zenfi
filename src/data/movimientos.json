@@ -1,0 +1,616 @@
+{
+  "periodo": "2026-08",
+  "generado_en": "2026-08-19T10:00:00-06:00",
+  "movimientos": [
+    {
+      "id": "txn_001",
+      "fecha": "2026-08-01T08:12:00-06:00",
+      "descripcion": "SPEI RECIBIDO NOMINA YOTEPRESTO SA DE CV",
+      "monto": 18450.0,
+      "moneda": "MXN",
+      "categoria": "Ingresos",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_002",
+      "fecha": "2026-08-01T09:03:00-06:00",
+      "descripcion": "OXXO CANTERAS",
+      "monto": -89.5,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_003",
+      "fecha": "2026-08-01T13:47:00-06:00",
+      "descripcion": "RAPPI MX",
+      "monto": -287.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_004",
+      "fecha": "2026-08-01T19:20:00-06:00",
+      "descripcion": "CFE SUMINISTRO BASICO",
+      "monto": -1240.0,
+      "moneda": "MXN",
+      "categoria": "Servicios",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_005",
+      "fecha": "2026-08-02T07:55:00-06:00",
+      "descripcion": "DIDI MOBILITY",
+      "monto": -64.0,
+      "moneda": "MXN",
+      "categoria": "Salud",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_006",
+      "fecha": "2026-08-02T11:30:00-06:00",
+      "descripcion": "STARBUCKS REFORMA 222",
+      "monto": -125.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_007",
+      "fecha": "2026-08-02T16:05:00-06:00",
+      "descripcion": "AMAZON MX MARKETPLACE",
+      "monto": -1899.0,
+      "moneda": "MXN",
+      "categoria": "Compras",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_008",
+      "fecha": "2026-08-02T21:14:00-06:00",
+      "descripcion": "NETFLIX.COM",
+      "monto": -299.0,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_009",
+      "fecha": "2026-08-03T10:22:00-06:00",
+      "descripcion": "FARMACIAS GUADALAJARA SUC CENTRO",
+      "monto": -432.5,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_010",
+      "fecha": "2026-08-03T14:00:00-06:00",
+      "descripcion": "PAGO TARJETA DE CREDITO BBVA",
+      "monto": -5000.0,
+      "moneda": "MXN",
+      "categoria": "Pagos",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_011",
+      "fecha": "2026-08-03T20:41:00-06:00",
+      "descripcion": "UBER EATS",
+      "monto": -215.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_012",
+      "fecha": "2026-08-04T09:10:00-06:00",
+      "descripcion": "TELCEL RECARGA",
+      "monto": -200.0,
+      "moneda": "MXN",
+      "categoria": "Servicios",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_013",
+      "fecha": "2026-08-04T12:33:00-06:00",
+      "descripcion": "SORIANA HIPER",
+      "monto": -2340.75,
+      "moneda": "MXN",
+      "categoria": "Supermercado",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_014",
+      "fecha": "2026-08-04T18:58:00-06:00",
+      "descripcion": "CINEPOLIS VIP",
+      "monto": -380.0,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_015",
+      "fecha": "2026-08-05T08:45:00-06:00",
+      "descripcion": "OXXO CANTERAS",
+      "monto": -45.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_016",
+      "fecha": "2026-08-05T15:12:00-06:00",
+      "descripcion": "SPOTIFY P2A34F",
+      "monto": -139.0,
+      "moneda": "MXN",
+      "categoria": null,
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_017",
+      "fecha": "2026-08-05T17:30:00-06:00",
+      "descripcion": "RETIRO CAJERO BANORTE SUC 4412",
+      "monto": -3000.0,
+      "moneda": "MXN",
+      "categoria": "Efectivo",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_018",
+      "fecha": "2026-08-06T11:00:00-06:00",
+      "descripcion": "GASOLINERA PEMEX E10023 CARRETERA OAXACA-PUERTO ESCONDIDO KM 45",
+      "monto": -900.0,
+      "moneda": "MXN",
+      "categoria": "Transporte",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_019",
+      "fecha": "2026-08-06T13:15:00-06:00",
+      "descripcion": "MERCADO PAGO*CAFE LA BREVE",
+      "monto": -78.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_020",
+      "fecha": "2026-08-06T22:02:00-06:00",
+      "descripcion": "SPEI ENVIADO A JOSE R.",
+      "monto": -1500.0,
+      "moneda": "MXN",
+      "categoria": "Transferencias",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_021",
+      "fecha": "2026-08-07T09:30:00-06:00",
+      "descripcion": "RAPPI MX",
+      "monto": -412.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_022",
+      "fecha": "2026-08-07T09:30:00-06:00",
+      "descripcion": "RAPPI MX",
+      "monto": -412.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_023",
+      "fecha": "2026-08-07T14:20:00-06:00",
+      "descripcion": "APPLE.COM/BILL",
+      "monto": -49.0,
+      "moneda": "MXN",
+      "categoria": "Suscripciones",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_024",
+      "fecha": "2026-08-08T10:05:00-06:00",
+      "descripcion": "WALMART SUPERCENTER",
+      "monto": "1876.40",
+      "moneda": "MXN",
+      "categoria": "Supermercado",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_025",
+      "fecha": "2026-08-08T16:44:00-06:00",
+      "descripcion": "CAFÉ BRÚJULA — ALCALÁ ☕",
+      "monto": -95.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_026",
+      "fecha": "2026-08-08T19:00:00-06:00",
+      "descripcion": "GYM SMART FIT MENSUALIDAD",
+      "monto": -449.0,
+      "moneda": "MXN",
+      "categoria": "Salud",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_027",
+      "fecha": "2026-08-09T08:20:00-06:00",
+      "descripcion": "DIDI MOBILITY",
+      "monto": -52.0,
+      "moneda": "MXN",
+      "categoria": "Transporte",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_028",
+      "fecha": "2026-08-09T12:00:00-06:00",
+      "descripcion": "REEMBOLSO AMAZON MX",
+      "monto": 1899.0,
+      "moneda": "MXN",
+      "categoria": "Compras",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_029",
+      "fecha": "2026-08-09T18:30:00-06:00",
+      "descripcion": "LIVERPOOL POLANCO",
+      "monto": -3450.0,
+      "moneda": "MXN",
+      "categoria": "Compras",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_030",
+      "fecha": "2026-08-10T07:40:00-06:00",
+      "descripcion": "OXXO CANTERAS",
+      "monto": -32.0,
+      "moneda": "MXN",
+      "categoria": "",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_031",
+      "fecha": "2026-08-10T13:22:00-06:00",
+      "descripcion": "SUSHI ITTO",
+      "monto": -640.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_032",
+      "fecha": "2026-08-10T20:15:00-06:00",
+      "descripcion": "AWS EMEA SERVICES",
+      "monto": -12.0,
+      "moneda": "USD",
+      "categoria": "Servicios",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_033",
+      "fecha": "2026-08-11T09:00:00-06:00",
+      "descripcion": "RENTA DEPARTAMENTO AGOSTO",
+      "monto": -48500.0,
+      "moneda": "MXN",
+      "categoria": "Vivienda",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_034",
+      "fecha": "2026-08-11T15:33:00-06:00",
+      "descripcion": "7 ELEVEN",
+      "monto": -68.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_035",
+      "fecha": "2026-08-11T21:00:00-06:00",
+      "descripcion": "HBO MAX",
+      "monto": -149.0,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_036",
+      "fecha": "2026-08-12T10:44:00-06:00",
+      "descripcion": "COMISION MANEJO DE CUENTA",
+      "monto": 0.0,
+      "moneda": "MXN",
+      "categoria": "Comisiones",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_037",
+      "fecha": "2026-08-12T14:10:00-06:00",
+      "descripcion": "COSTCO WHOLESALE",
+      "monto": -4120.9,
+      "moneda": "MXN",
+      "categoria": "Supermercado",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_038",
+      "fecha": "2026-08-12T19:47:00-06:00",
+      "descripcion": "CERVECERIA LA BUENA",
+      "monto": -520.0,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_039",
+      "fecha": "2026-08-13T08:15:00-06:00",
+      "descripcion": "OXXO CANTERAS",
+      "monto": -112.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_040",
+      "fecha": "2026-08-13T16:00:00-06:00",
+      "descripcion": "CONSULTA MEDICA DR. RAMIREZ",
+      "monto": -800.0,
+      "moneda": "MXN",
+      "categoria": "Salud",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_041",
+      "fecha": "2026-08-14T11:11:00-06:00",
+      "descripcion": "MERCADO LIBRE MX",
+      "monto": -2299.0,
+      "moneda": "MXN",
+      "categoria": "Compras",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_042",
+      "fecha": "2026-08-14T13:05:00-06:00",
+      "descripcion": "TACOS EL PASTORCITO",
+      "monto": -180.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_043",
+      "fecha": "2026-08-14T17:50:00-06:00",
+      "descripcion": "SPEI ENVIADO A MARIA L.",
+      "monto": -2000.0,
+      "moneda": "MXN",
+      "categoria": "Transferencias",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_044",
+      "fecha": "2026-08-15T09:25:00-06:00",
+      "descripcion": "UBER TRIP",
+      "monto": -138.0,
+      "moneda": "MXN",
+      "categoria": "Transporte",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_045",
+      "fecha": "2026-08-15T09:25:00-06:00",
+      "descripcion": "UBER TRIP",
+      "monto": -138.0,
+      "moneda": "MXN",
+      "categoria": "Transporte",
+      "cuenta": "Crédito ****9012",
+      "estado": "pendiente"
+    },
+    {
+      "id": "txn_046",
+      "fecha": "2026-08-15T14:30:00-06:00",
+      "descripcion": "CHEDRAUI SELECTO",
+      "monto": -1230.6,
+      "moneda": "MXN",
+      "categoria": "Supermercado",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_047",
+      "fecha": "2026-08-15T20:00:00-06:00",
+      "descripcion": "DOMINOS PIZZA",
+      "monto": -389.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_048",
+      "fecha": "2026-08-16T10:00:00-06:00",
+      "descripcion": "SEGURO GNP AUTO MENSUAL",
+      "monto": "2150.00",
+      "moneda": "MXN",
+      "categoria": "Seguros",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_049",
+      "fecha": "2026-08-16T12:45:00-06:00",
+      "descripcion": "TIENDA DE CONVENIENCIA",
+      "monto": -55.0,
+      "moneda": "MXN",
+      "categoria": null,
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_050",
+      "fecha": "2026-08-16T18:20:00-06:00",
+      "descripcion": "SAMS CLUB",
+      "monto": -1890.0,
+      "moneda": "MXN",
+      "categoria": "Supermercado",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_051",
+      "fecha": "2026-08-17T08:50:00-06:00",
+      "descripcion": "DIDI MOBILITY",
+      "monto": -71.0,
+      "moneda": "MXN",
+      "categoria": "Transporte",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_052",
+      "fecha": "2026-08-17T15:00:00-06:00",
+      "descripcion": "PAPELERIA LUMEN",
+      "monto": -234.0,
+      "moneda": "MXN",
+      "categoria": "Compras",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_053",
+      "fecha": "2026-08-17T19:30:00-06:00",
+      "descripcion": "RESTAURANTE CASA OAXACA",
+      "monto": -1450.0,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Crédito ****9012",
+      "estado": "pendiente"
+    },
+    {
+      "id": "txn_054",
+      "fecha": "2026-08-18T09:15:00-06:00",
+      "descripcion": "TOTALPLAY INTERNET",
+      "monto": -699.0,
+      "moneda": "MXN",
+      "categoria": "Servicios",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_055",
+      "fecha": "2026-08-18T13:40:00-06:00",
+      "descripcion": "OXXO CANTERAS",
+      "monto": -78.5,
+      "moneda": "MXN",
+      "categoria": "Comida",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_056",
+      "fecha": "2026-08-18T21:05:00-06:00",
+      "descripcion": "STEAM PURCHASE",
+      "monto": -459.0,
+      "moneda": "MXN",
+      "categoria": "Entretenimiento",
+      "cuenta": "Crédito ****9012",
+      "estado": "pendiente"
+    },
+    {
+      "id": "txn_057",
+      "fecha": "2026-08-19T08:00:00-06:00",
+      "descripcion": "SPEI RECIBIDO REEMBOLSO GASTOS",
+      "monto": 3200.0,
+      "moneda": "MXN",
+      "categoria": "Ingresos",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_058",
+      "fecha": "2026-08-19T11:20:00-06:00",
+      "descripcion": "FARMACIA DEL AHORRO",
+      "monto": -156.0,
+      "moneda": "MXN",
+      "categoria": "Salud",
+      "cuenta": "Débito ****4821",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_059",
+      "fecha": "2025-11-14T16:30:00-06:00",
+      "descripcion": "AEROMEXICO VUELO MEX-OAX",
+      "monto": -4890.0,
+      "moneda": "MXN",
+      "categoria": "Viajes",
+      "cuenta": "Crédito ****9012",
+      "estado": "confirmada"
+    },
+    {
+      "id": "txn_060",
+      "fecha": "2026-09-02T00:00:00-06:00",
+      "descripcion": "CARGO PROGRAMADO SEGURO GASTOS MEDICOS",
+      "monto": -1780.0,
+      "moneda": "MXN",
+      "categoria": "Seguros",
+      "cuenta": "Débito ****4821",
+      "estado": "programada"
+    },
+    {
+      "id": "txn_061",
+      "fecha": "2026-08-13T22:10:00-06:00",
+      "descripcion": "CARGO NO RECONOCIDO",
+      "monto": -1299.0,
+      "moneda": "MXN",
+      "categoria": null,
+      "cuenta": null,
+      "estado": "en_disputa"
+    }
+  ]
+}
