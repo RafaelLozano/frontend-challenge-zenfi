@@ -1,25 +1,51 @@
 .movement-list {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: none;
   min-width: 0;
-  min-height: 0;
-  overflow: hidden;
 }
 
 .movement-list__toolbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
   padding: 14px 18px 10px;
   flex: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--zf-bg);
+}
+
+.movement-list__count-group {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
 }
 
 .movement-list__count {
   margin: 0;
   font-size: 12.5px;
   color: var(--zf-text-2);
+}
+
+.movement-list__review {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--zf-text-3);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.movement-list__review:focus-visible {
+  outline: 2px solid var(--zf-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .movement-list__clear {
@@ -44,9 +70,6 @@
   display: grid;
   gap: 16px;
   padding: 0 18px 24px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  flex: 1;
+  flex: none;
   min-width: 0;
-  min-height: 0;
 }
