@@ -10,7 +10,7 @@ export type MovementListProps = {
   readonly baselineCount: number;
   readonly hasActiveFilters: boolean;
   readonly onClearFilters: () => void;
-  readonly onSelectMovement: (movementId: string) => void;
+  readonly onSelectMovement: (movementId: string, sourceElement?: HTMLElement | null) => void;
 };
 
 const buildCountLabel = (

@@ -15,7 +15,7 @@ import styles from './MovementRow.module.css';
 export type MovementRowProps = {
   readonly movement: Movement;
   readonly periodMonthName: string;
-  readonly onSelect: (movementId: string) => void;
+  readonly onSelect: (movementId: string, sourceElement: HTMLElement) => void;
 };
 
 const getAmountClassName = (amountCents: number): string => {
@@ -35,9 +35,10 @@ export const MovementRow = ({ movement, periodMonthName, onSelect }: MovementRow
   return (
     <button
       type="button"
+      id={`movement-row-${movement.id}`}
       className={styles.movementRow}
       aria-label={buildMovementRowAriaLabel(movement)}
-      onClick={() => onSelect(movement.id)}
+      onClick={(event) => onSelect(movement.id, event.currentTarget)}
     >
       <CategoryIcon categoryId={movement.categoryId} size="row" />
 

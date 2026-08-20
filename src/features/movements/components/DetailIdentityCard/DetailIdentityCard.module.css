@@ -1,0 +1,87 @@
+.detail-identity-card {
+  padding: 18px 16px;
+  border-radius: var(--zf-radius-2xl);
+  background: var(--zf-surface);
+  box-shadow: var(--zf-shadow-card);
+}
+
+.detail-identity-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.detail-identity-card__info {
+  min-width: 0;
+}
+
+.detail-identity-card__merchant {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--zf-ink);
+  text-wrap: pretty;
+}
+
+.detail-identity-card__date {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--zf-text-2);
+}
+
+.detail-identity-card__divider {
+  margin: 16px 0;
+  height: 1px;
+  background: var(--zf-divider);
+}
+
+.detail-identity-card__amount-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.detail-identity-card__direction {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--zf-text-3);
+}
+
+.detail-identity-card__amount {
+  margin: 4px 0 0;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-variant-numeric: var(--zf-font-numeric);
+}
+
+.detail-identity-card__amount--income {
+  color: #0b8f5d;
+}
+
+.detail-identity-card__amount--expense {
+  color: var(--zf-ink);
+}
+
+.detail-identity-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--zf-radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.detail-identity-card__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

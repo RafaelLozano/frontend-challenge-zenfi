@@ -1,0 +1,89 @@
+.detail-explanation-card {
+  padding: 18px 16px;
+  border-radius: var(--zf-radius-2xl);
+  background: var(--zf-surface);
+  box-shadow: var(--zf-shadow-card);
+}
+
+.detail-explanation-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.detail-explanation-card__help-icon {
+  color: var(--zf-primary);
+}
+
+.detail-explanation-card__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--zf-ink);
+}
+
+.detail-explanation-card__note {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--zf-text-body);
+  text-wrap: pretty;
+}
+
+.detail-explanation-card__raw-block {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--zf-bg);
+}
+
+.detail-explanation-card__raw-label {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--zf-text-3);
+}
+
+.detail-explanation-card__raw-value {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--zf-ink);
+  word-break: break-word;
+  user-select: text;
+}
+
+.detail-explanation-card__info-row,
+.detail-explanation-card__warning-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.detail-explanation-card__info-icon {
+  color: #0a7fc2;
+  flex-shrink: 0;
+}
+
+.detail-explanation-card__info-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--zf-text-2);
+}
+
+.detail-explanation-card__warning-icon {
+  color: #a8690a;
+  flex-shrink: 0;
+}
+
+.detail-explanation-card__warning-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--zf-text-2);
+}

@@ -1,4 +1,5 @@
 .movements-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,9 +9,20 @@
   background: var(--zf-bg);
 }
 
+.movements-page__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
 .movements-page__filters {
   display: grid;
   gap: 12px;
+  min-width: 0;
   padding: 14px 0;
   flex: none;
   background: var(--zf-bg);

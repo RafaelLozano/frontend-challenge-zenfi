@@ -1,0 +1,20 @@
+.movement-detail {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  background: var(--zf-bg);
+  animation: zf-fade 0.18s ease-out;
+}
+
+.movement-detail__scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 120px;
+}
+
+.movement-detail__cards {
+  display: grid;
+  gap: 12px;
+}
