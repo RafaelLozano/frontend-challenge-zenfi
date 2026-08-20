@@ -98,6 +98,17 @@ export type CategorySummary = {
   readonly movementCount: number;
 };
 
+export type CategoryBreakdownKey = CategoryId | 'otras';
+
+export type CategoryBreakdownItem = {
+  readonly key: CategoryBreakdownKey;
+  readonly categoryId: CategoryId | null;
+  readonly label: string;
+  readonly totalCents: number;
+  readonly percentage: number;
+  readonly movementCount: number;
+};
+
 export type MonthlySummary = {
   readonly period: string;
   readonly periodLabel: string;
@@ -105,7 +116,16 @@ export type MonthlySummary = {
   readonly expensesCents: number;
   readonly balanceCents: number;
   readonly expensesByCategory: readonly CategorySummary[];
+  readonly expenseBreakdown: readonly CategoryBreakdownItem[];
   readonly uncategorizedCount: number;
   readonly movementsInPeriod: number;
   readonly excludedFromTotalsCount: number;
+  readonly includedInSummaryCount: number;
+};
+
+export type DataQualityNoticeContent = {
+  readonly intro: string;
+  readonly exclusionHeading: string | null;
+  readonly exclusionLines: readonly string[];
+  readonly inferredSignLine: string | null;
 };

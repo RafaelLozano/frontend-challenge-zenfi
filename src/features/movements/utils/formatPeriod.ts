@@ -65,6 +65,17 @@ export const formatPeriodMonthName = (period: string): string => {
   return monthName;
 };
 
+export const formatDayOfMonthLong = (date: Date): string => {
+  const day = date.getDate();
+  const monthName = MONTH_NAMES[date.getMonth()];
+
+  if (!monthName) {
+    return String(day);
+  }
+
+  return `${day} de ${monthName}`;
+};
+
 export const isDateInPeriod = (date: Date, period: string): boolean => {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
