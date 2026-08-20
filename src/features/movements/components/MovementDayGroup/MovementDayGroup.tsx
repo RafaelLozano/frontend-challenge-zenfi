@@ -6,7 +6,7 @@ import styles from './MovementDayGroup.module.css';
 export type MovementDayGroupProps = {
   readonly group: DayGroup;
   readonly periodMonthName: string;
-  readonly onSelectMovement: (movementId: string) => void;
+  readonly onSelectMovement: (movementId: string, sourceElement?: HTMLElement | null) => void;
 };
 
 export const MovementDayGroup = ({
