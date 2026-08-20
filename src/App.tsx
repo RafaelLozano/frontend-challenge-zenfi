@@ -1,13 +1,17 @@
-import movimientos from './data/movimientos.json';
+import movimientosRaw from './data/movimientos.json';
+import { getSelectableCategoriaOptions } from './features/movimientos/catalog/categorias';
+import { MovimientosPage } from './features/movimientos/MovimientosPage';
+import { parseMovimientosFile } from './features/movimientos/utils/parseMovimientosFile';
+
+const { periodo, movimientos } = parseMovimientosFile(movimientosRaw);
+const categorias = getSelectableCategoriaOptions();
 
 const App = () => (
-  <main style={{ padding: 24 }}>
-    <h1>Reto técnico — Movimientos</h1>
-    <p>
-      {movimientos.movimientos.length} movimientos cargados desde <code>src/data/movimientos.json</code>.
-    </p>
-    <p>Borra este componente y empieza aquí.</p>
-  </main>
+  <MovimientosPage
+    initialMovimientos={movimientos}
+    periodo={periodo}
+    categorias={categorias}
+  />
 );
 
 export default App;
