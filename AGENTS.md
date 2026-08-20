@@ -28,12 +28,12 @@ Actúa como un senior que prefiere lo aburrido y correcto:
 src/
 ├── components/          # UI básica reutilizable (Button, Badge, Select…)
 ├── features/
-│   └── movimientos/     # dominio del reto
+│   └── movements/       # dominio del reto
 │       ├── components/  # piezas de la pantalla (una por archivo)
 │       ├── hooks/       # estado, handlers, composición de datos
 │       ├── utils/       # funciones puras (parseo, agregados, formato)
 │       ├── types.ts     # tipos del dominio
-│       └── MovimientosPage.tsx
+│       └── MovementsPage.tsx
 ├── types/               # tipos compartidos (si aplica)
 ├── utils/               # utilidades globales (formato moneda, fechas)
 ├── App.tsx
@@ -59,18 +59,18 @@ Reglas:
 ### Plantilla
 
 ```tsx
-// features/movimientos/components/MovementRow/MovementRow.tsx
-import type { Movimiento } from '../../types';
+// features/movements/components/MovementRow/MovementRow.tsx
+import type { Movement } from '../../types';
 import styles from './MovementRow.module.css';
 
 export type MovementRowProps = {
-  movimiento: Movimiento;
+  movement: Movement;
   isSelected: boolean;
   onSelectCategory: (id: string, categoryId: string) => void;
 };
 
 export const MovementRow = ({
-  movimiento,
+  movement,
   isSelected,
   onSelectCategory,
 }: MovementRowProps) => (
@@ -91,33 +91,33 @@ export const MovementRow = ({
 ```
 
 ```tsx
-// features/movimientos/hooks/useMovimientosPage.ts
+// features/movements/hooks/useMovementsPage.ts
 import { useMemo, useState } from 'react';
-import { buildResumenMensual, updateMovimientoCategoria } from '../utils';
-import type { Movimiento } from '../types';
+import { buildMonthlySummary, updateMovementCategory } from '../utils';
+import type { Movement } from '../types';
 
-export const useMovimientosPage = (initialMovimientos: Movimiento[]) => {
-  const [movimientos, setMovimientos] = useState(initialMovimientos);
+export const useMovementsPage = (initialMovements: Movement[]) => {
+  const [movements, setMovements] = useState(initialMovements);
 
-  const resumen = useMemo(() => buildResumenMensual(movimientos), [movimientos]);
+  const summary = useMemo(() => buildMonthlySummary(movements), [movements]);
 
   const handleSelectCategory = (id: string, categoryId: string) => {
-    setMovimientos((current) => updateMovimientoCategoria(current, id, categoryId));
+    setMovements((current) => updateMovementCategory(current, id, categoryId));
   };
 
-  return { movimientos, resumen, handleSelectCategory };
+  return { movements, summary, handleSelectCategory };
 };
 ```
 
 ```tsx
-// features/movimientos/MovimientosPage.tsx — wiring fino
-export const MovimientosPage = ({ initialMovimientos }: MovimientosPageProps) => {
-  const { movimientos, resumen, handleSelectCategory } = useMovimientosPage(initialMovimientos);
+// features/movements/MovementsPage.tsx — wiring fino
+export const MovementsPage = ({ initialMovements }: MovementsPageProps) => {
+  const { movements, summary, handleSelectCategory } = useMovementsPage(initialMovements);
 
   return (
     <main className={styles.page}>
-      <ResumenMensual resumen={resumen} />
-      <MovementList movimientos={movimientos} onSelectCategory={handleSelectCategory} />
+      <MonthlySummaryView summary={summary} />
+      <MovementList movements={movements} onSelectCategory={handleSelectCategory} />
     </main>
   );
 };
@@ -161,7 +161,7 @@ Usa tokens CSS en `:root` (`--color-text`, `--space-md`) en lugar de valores má
 El JSON **no viene limpio**. Modela el dominio en `types.ts`:
 
 1. Tipo **raw** (forma del JSON).
-2. Función **parse/normalize** en `utils/` que devuelve `Movimiento[]` o falla de forma explícita.
+2. Función **parse/normalize** en `utils/` que devuelve `Movement[]` o falla de forma explícita.
 3. Tipos de dominio usados solo después del parseo.
 
 ```typescript
@@ -169,15 +169,15 @@ El JSON **no viene limpio**. Modela el dominio en `types.ts`:
 const total = (data as any).movimientos.reduce(...);
 
 // ✅ GOOD
-export type Movimiento = {
+export type Movement = {
   id: string;
   date: Date;
   amountCents: number;
-  categoryId: CategoriaId;
+  categoryId: CategoryId;
   description: string;
 };
 
-export const parseMovimientos = (raw: unknown): Movimiento[] => { /* validación */ };
+export const parseMovements = (raw: unknown): Movement[] => { /* validación */ };
 ```
 
 - Usa `satisfies` para objetos literales con inferencia segura.
@@ -193,13 +193,13 @@ export const parseMovimientos = (raw: unknown): Movimiento[] => { /* validación
 | Funciones testeables sin React | Orquestación de estado de pantalla |
 | Validación de entrada | Handlers que llaman a `setState` |
 
-Nombre de hooks: siempre `use` + sustantivo/acción (`useMovimientosPage`, no `usePage`).
+Nombre de hooks: siempre `use` + sustantivo/acción (`useMovementsPage`, no `usePage`).
 
 ## Testing (opcional en el reto, recomendado para lógica)
 
 No hay runner configurado aún. Si añades tests, prioriza:
 
-1. **Utils** — Vitest puro (`parseMovimientos`, `buildResumenMensual`).
+1. **Utils** — Vitest puro (`parseMovements`, `buildMonthlySummary`).
 2. **Hooks** — `@testing-library/react` + `renderHook`.
 3. **Componentes** — solo interacción visible (cambiar categoría, resumen renderizado).
 
