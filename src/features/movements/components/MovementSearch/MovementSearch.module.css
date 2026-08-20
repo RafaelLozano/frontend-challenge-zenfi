@@ -8,7 +8,7 @@
   border: 1px solid var(--zf-border);
   border-radius: 15px;
   background: #fff;
-  color: var(--zf-text-3);
+  color: var(--zf-icon-muted);
 }
 
 .movement-search__input {
@@ -21,18 +21,27 @@
   color: var(--zf-ink);
 }
 
+.movement-search__input:focus-visible {
+  outline: 2px solid var(--zf-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .movement-search__input::placeholder {
-  color: var(--zf-text-3);
+  color: var(--zf-text-2);
 }
 
 .movement-search__clear {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -9px -10px -9px 0;
   padding: 0;
   border: none;
   background: transparent;
-  color: var(--zf-text-3);
+  color: var(--zf-text-2);
   cursor: pointer;
 }
 

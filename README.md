@@ -1,31 +1,41 @@
-# Technical challenge — Frontend (React + TypeScript)
+# Zenfi — Frontend Challenge
 
-Starter repo for the challenge. It ships the bare minimum to get going: **Vite + React + TypeScript**.
-Everything else —styling, libraries, folder structure, state— is up to you.
+**[Rafael Lozano Rolón](https://rafalozano.dev)** · Senior Frontend Engineer
 
-The full statement is in [`RETO.md`](./RETO.md).
+| | |
+| --- | --- |
+| **Portfolio** | [rafalozano.dev](https://rafalozano.dev) |
+| **CV** | [Rafa-Lozano-sr-frontend-engineer.pdf](./CV/Rafa-Lozano-sr-frontend-engineer%20.pdf) |
+| **Demo en vivo** | _pendiente de despliegue — ver [Despliegue](#despliegue)_ |
 
-## Your repo
+SPA de movimientos bancarios construido con **Vite + React 19 + TypeScript strict**. Importa
+`src/data/movimientos.json` directamente; no hay backend. Mobile-first, accesible y sin librería de
+estado global.
 
-This repo is a **template**. Hit **"Use this template" → "Create a new repository"** and create it
-**under your own account**. The repo is yours and you keep it.
+---
 
-Make it **public** — that way you can deploy it for free anywhere; GitHub Pages, for one, won't
-publish from a private repo without a paid plan. If you'd rather keep it private, that's fine too:
-just invite the two of us as collaborators, `SaulMoreyra` and `JohanAlvarado`.
+## Vista general del flujo
 
-Work straight on `main`. Commit as you go and push often — make as many commits as you need with
-messages that read, because we look at the history, not just the final state, and if something
-breaks on the last day what's pushed is what exists. Get your first commit up early: that's how we
-timestamp the start of the time-box.
+![Flujo mobile-first: carga, lista de movimientos, detalle, selector de categoría y confirmación con deshacer](./docs/demo-flow.png)
 
-## Requirements
+*Reclasificar movimientos mal categorizados — entender cada cargo, corregir la categoría en tres
+toques y deshacer si te equivocaste.*
 
-- Node `>=22.12` (there's an `.nvmrc`)
-- pnpm 10 (`corepack enable`). If you'd rather use npm or yarn, go ahead: delete the
-  `packageManager` field from `package.json` and that's it.
+| Pantalla | Qué hace |
+| --- | --- |
+| **Carga** | Normaliza el JSON y muestra el conteo real de movimientos |
+| **Movimientos** | Resumen mensual, filtros y lista agrupada por día |
+| **Detalle** | Explicación en lenguaje claro + metadatos del cargo |
+| **Elegir categoría** | Sheet con las 15 categorías en 4 familias de color |
+| **Confirmación** | Toast con **Deshacer** y recálculo instantáneo del resumen |
 
-## How to run it
+Decisiones de producto, datos y arquitectura: [`DECISIONES.md`](./DECISIONES.md).
+
+---
+
+## Cómo correrlo
+
+Requisitos: Node `>=22.12` (`.nvmrc`) y pnpm 10 (`corepack enable`).
 
 ```bash
 corepack enable
@@ -33,56 +43,65 @@ pnpm install
 pnpm dev
 ```
 
-It runs at http://localhost:5173.
+Abre http://localhost:5173.
 
 ## Scripts
 
-| Script           | What it does                     |
-| ---------------- | -------------------------------- |
-| `pnpm dev`       | Development server               |
-| `pnpm build`     | Typecheck + production build     |
-| `pnpm preview`   | Serves the build                 |
-| `pnpm lint`      | ESLint                           |
-| `pnpm typecheck` | TypeScript only                  |
+| Script           | Qué hace                 |
+| ---------------- | ------------------------ |
+| `pnpm dev`       | Servidor de desarrollo   |
+| `pnpm build`     | Typecheck + build prod   |
+| `pnpm preview`   | Sirve el build local     |
+| `pnpm lint`      | ESLint                   |
+| `pnpm typecheck` | TypeScript sin emitir    |
 
-## The data
+## Stack y decisiones
 
-`src/data/movimientos.json` — one month of transactions from an account, exactly as it comes
-out of a bank aggregator. **It's deliberately untyped**: modeling and normalizing that data is
-part of the challenge. Import it directly, no backend needed.
+| Área      | Decisión                                       | Por qué                                              |
+| --------- | ---------------------------------------------- | ---------------------------------------------------- |
+| Build     | Vite                                           | Rápido, cero config extra, ideal para un SPA         |
+| UI        | React 19 (componentes funcionales)             | Requisito del reto                                   |
+| Tipos     | TypeScript `strict` + `noUncheckedIndexedAccess` | El JSON viene sucio; fallar temprano es más seguro |
+| Estilos   | CSS Modules + BEM                              | Scope local, convención clara, sin runtime CSS-in-JS |
+| Estado    | `useState` / `useMemo` en hooks                | Una pantalla, sin librería de estado global          |
+| Datos     | Import estático del JSON + parseo en utils     | Sin backend; la normalización vive fuera de React    |
 
-```ts
-import movimientos from './data/movimientos.json';
+## Estructura de carpetas
+
+```text
+src/
+├── components/          # UI reutilizable (Icon, PhoneShell, SplashScreen)
+├── features/movements/  # Dominio: tipos, utils, hooks, componentes de pantalla
+├── utils/               # Helpers globales (formato moneda)
+├── data/movimientos.json
+└── App.tsx
 ```
 
-## What you deliver
+Un componente por archivo, un CSS Module por componente, imports directos (sin barrel files).
 
-1. The code, with this README updated if you change how it's run.
-2. [`DECISIONES.md`](./DECISIONES.md) — one page max. It counts as much as the code.
-3. An email to both of us when you're done, with the link to your repo. That email closes the
-   submission: whatever is on `main` at that point is what we review.
+## Despliegue
 
-**Plus: deploy it** (Vercel, Netlify, GitHub Pages, whatever) and send the URL too. Not required and
-it doesn't count against you — but being able to open it without cloning helps.
+Build de producción:
 
-## What's decided and what isn't
+```bash
+pnpm build
+```
 
-Decided (so you don't spend time there):
+Compatible con **Vercel**, **Netlify** o **GitHub Pages**. Para GitHub Pages, configura `base` en
+`vite.config.ts` con el nombre del repo.
 
-- Vite as the build tool, TypeScript in `strict` mode
-- ESLint with the standard Vite + React Hooks config
+El sitio desplegado carga **Poppins** y **Material Symbols** desde Google Fonts; sin red los iconos
+se ven como texto plano.
 
-Not decided (your call, and that's what we'll talk about):
+## Entrega
 
-- Styling: plain CSS, Modules, Tailwind, CSS-in-JS, whatever you use
-- State, routing, charts, dates, currency formatting
-- Folder structure and data model
-- What gets shown first and what stays out
+1. Código en este repo (público o con acceso a `SaulMoreyra` y `JohanAlvarado`).
+2. [`DECISIONES.md`](./DECISIONES.md) actualizado (máx. una página).
+3. Email a saul.aragon@yotepresto.com y johan@yotepresto.com con link al repo **y** URL del demo.
 
-## Questions
+Enunciado completo: [`RETO.md`](./RETO.md).
 
-Something in the statement unclear? Ask — it's not penalized. Email **both addresses in copy**, so
-whoever sees it first can answer:
+---
 
-- saul.aragon@yotepresto.com
-- johan@yotepresto.com
+**[Rafael Lozano Rolón](https://rafalozano.dev)** — más proyectos y contacto en
+[rafalozano.dev](https://rafalozano.dev) · [CV (PDF)](./CV/Rafa-Lozano-sr-frontend-engineer%20.pdf)

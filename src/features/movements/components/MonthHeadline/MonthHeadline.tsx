@@ -9,5 +9,5 @@ export const MonthHeadline = ({ text }: MonthHeadlineProps) => {
     return null;
   }
 
-  return <p className={styles.monthHeadline}>{text}</p>;
+  return <h2 className={styles.monthHeadline}>{text}</h2>;
 };

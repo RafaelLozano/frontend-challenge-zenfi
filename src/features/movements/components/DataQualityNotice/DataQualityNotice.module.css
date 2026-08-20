@@ -11,7 +11,7 @@
 }
 
 .data-quality-notice__icon {
-  color: var(--zf-text-3);
+  color: var(--zf-icon-muted);
   margin-top: 1px;
 }
 

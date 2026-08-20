@@ -76,7 +76,7 @@ button.category-breakdown-row:focus-visible {
 
 .category-breakdown-row__percentage {
   font-size: 11.5px;
-  color: var(--zf-text-3);
+  color: var(--zf-text-2);
   font-variant-numeric: var(--zf-font-numeric);
 }
 
