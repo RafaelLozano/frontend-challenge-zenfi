@@ -49,18 +49,39 @@
   overflow: hidden;
 }
 
+@keyframes splash-bar-progress {
+  from {
+    width: 6%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 .splash-screen__bar-fill {
   display: block;
   height: 100%;
   width: 6%;
   border-radius: inherit;
   background: var(--zf-accent);
-  animation: zf-bar var(--splash-duration, 900ms) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: splash-bar-progress var(--splash-duration, 900ms) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes splash-footer-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .splash-screen__footer {
   margin: 0;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.72);
-  animation: zf-pulse 1.4s ease-in-out infinite;
+  animation: splash-footer-pulse 1.4s ease-in-out infinite;
 }

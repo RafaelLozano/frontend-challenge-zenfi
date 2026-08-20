@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export const SPLASH_DURATION_MS = 900;
+export const SPLASH_DURATION_MS = 2000;
 
 const prefersReducedMotion = (): boolean =>
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 export const useSplashScreen = () => {
   const [isVisible, setIsVisible] = useState(() => !prefersReducedMotion());
