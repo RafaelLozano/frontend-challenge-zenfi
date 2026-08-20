@@ -77,6 +77,10 @@ export const useMovementFilters = ({ movements, period }: UseMovementFiltersArgs
     setFilters(EMPTY_FILTERS);
   }, []);
 
+  const selectCategory = useCallback((categoryId: CategoryId) => {
+    setFilters((current) => ({ ...current, categoryId }));
+  }, []);
+
   return {
     filters,
     filteredMovements,
@@ -89,6 +93,7 @@ export const useMovementFilters = ({ movements, period }: UseMovementFiltersArgs
     setQuery,
     selectAllCategories,
     toggleCategory,
+    selectCategory,
     selectAllStatuses,
     toggleStatus,
     clearFilters,

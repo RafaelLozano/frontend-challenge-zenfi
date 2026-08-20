@@ -1,5 +1,6 @@
 import { getCategoryLabel } from '../catalog/categories';
 import type { Movement, MonthlySummary } from '../types';
+import { buildTopCategories } from './buildTopCategories';
 import { formatPeriodLabel } from './formatPeriod';
 
 type CategoryAccumulator = {
@@ -79,6 +80,8 @@ export const buildMonthlySummary = (
     }))
     .sort((left, right) => right.totalCents - left.totalCents);
 
+  const includedInSummaryCount = movementsInPeriod - excludedFromTotalsCount;
+
   return {
     period,
     periodLabel: formatPeriodLabel(period),
@@ -86,8 +89,10 @@ export const buildMonthlySummary = (
     expensesCents,
     balanceCents: incomeCents - expensesCents,
     expensesByCategory,
+    expenseBreakdown: buildTopCategories(expensesByCategory, expensesCents),
     uncategorizedCount,
     movementsInPeriod,
     excludedFromTotalsCount,
+    includedInSummaryCount,
   };
 };

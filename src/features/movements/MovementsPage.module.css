@@ -27,3 +27,13 @@
   flex: none;
   background: var(--zf-bg);
 }
+
+.movements-page__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}

@@ -3,7 +3,7 @@ import type { CategoryId } from '../../types';
 import { Icon } from '../../../../components/Icon/Icon';
 import styles from './CategoryIcon.module.css';
 
-export type CategoryIconSize = 'row' | 'detail' | 'sheet' | 'sheetRow' | 'categoryCard';
+export type CategoryIconSize = 'row' | 'detail' | 'sheet' | 'sheetRow' | 'categoryCard' | 'breakdown';
 
 export type CategoryIconProps = {
   readonly categoryId: CategoryId;
@@ -16,6 +16,7 @@ const SIZE_CONFIG: Record<CategoryIconSize, { box: number; radius: number; icon:
   sheet: { box: 48, radius: 15, icon: 22 },
   sheetRow: { box: 38, radius: 12, icon: 20 },
   categoryCard: { box: 40, radius: 14, icon: 20 },
+  breakdown: { box: 32, radius: 12, icon: 18 },
 };
 
 export const CategoryIcon = ({ categoryId, size = 'row' }: CategoryIconProps) => {

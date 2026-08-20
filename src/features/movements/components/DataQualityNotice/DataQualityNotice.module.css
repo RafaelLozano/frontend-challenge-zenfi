@@ -1,0 +1,28 @@
+.data-quality-notice {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin-top: 8px;
+  padding: 14px;
+  border: 1px solid var(--zf-border);
+  border-radius: var(--zf-radius-xl);
+  background: var(--zf-surface);
+}
+
+.data-quality-notice__icon {
+  color: var(--zf-text-3);
+  margin-top: 1px;
+}
+
+.data-quality-notice__body {
+  display: grid;
+  gap: 6px;
+}
+
+.data-quality-notice__paragraph {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--zf-text-2);
+}

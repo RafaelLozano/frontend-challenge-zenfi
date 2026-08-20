@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import type { CategoryOption } from '../catalog/categories';
-import type { CategoryId, Movement } from '../types';
+import type { CategoryId, DataQualityNoticeContent, Movement } from '../types';
+import { buildDataQualityNoticeContent } from '../utils/buildDataQualityNoticeContent';
+import { buildDataQualityReport } from '../utils/buildDataQualityReport';
+import { buildMonthHeadline } from '../utils/buildMonthHeadline';
 import { buildMonthlySummary } from '../utils/buildMonthlySummary';
 import { useMovementFilters } from './useMovementFilters';
 import { useMovementSelection } from './useMovementSelection';
@@ -33,6 +36,22 @@ export const useMovementsPage = ({ initialMovements, period }: UseMovementsPageA
 
   const summary = useMemo(() => buildMonthlySummary(movements, period), [movements, period]);
   const filterState = useMovementFilters({ movements, period });
+
+  const monthHeadline = useMemo(
+    () => buildMonthHeadline(filterState.periodMonthName, summary.expenseBreakdown),
+    [filterState.periodMonthName, summary.expenseBreakdown],
+  );
+
+  const dataQualityNotice = useMemo((): DataQualityNoticeContent => {
+    const quality = buildDataQualityReport(movements);
+
+    return buildDataQualityNoticeContent(
+      movements,
+      quality,
+      period,
+      summary.includedInSummaryCount,
+    );
+  }, [movements, period, summary.includedInSummaryCount]);
 
   const selectedMovement = useMemo(
     () => movements.find((movement) => movement.id === selectedMovementId) ?? null,
@@ -114,6 +133,8 @@ export const useMovementsPage = ({ initialMovements, period }: UseMovementsPageA
   return {
     movements,
     summary,
+    monthHeadline,
+    dataQualityNotice,
     selectedMovement,
     selectedMovementId,
     showUpdatedBadge,
