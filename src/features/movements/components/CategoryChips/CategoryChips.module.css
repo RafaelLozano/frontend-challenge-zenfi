@@ -16,8 +16,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  height: 36px;
-  padding: 0 14px;
+  min-height: 44px;
+  padding: 4px 14px;
   border: 1px solid var(--zf-border);
   border-radius: var(--zf-radius-pill);
   background: #fff;
