@@ -74,8 +74,19 @@ body {
 }
 
 button,
-select {
+select,
+input,
+textarea {
   font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--zf-primary);
+  outline-offset: 2px;
 }
 
 .ms {

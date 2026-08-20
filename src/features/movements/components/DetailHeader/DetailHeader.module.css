@@ -22,7 +22,7 @@
 }
 
 .detail-header__back:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--zf-accent);
   outline-offset: 2px;
 }
 

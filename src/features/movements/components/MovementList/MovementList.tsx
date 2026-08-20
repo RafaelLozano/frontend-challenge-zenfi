@@ -57,7 +57,7 @@ export const MovementList = forwardRef<HTMLElement, MovementListProps>(
     );
 
     return (
-      <section ref={ref} className={styles.movementList} aria-label="Lista de movimientos">
+      <main ref={ref} className={styles.movementList} aria-label="Lista de movimientos">
         <div className={styles.movementListToolbar}>
           <div className={styles.movementListCountGroup}>
             <p className={styles.movementListCount}>{countLabel}</p>
@@ -96,7 +96,7 @@ export const MovementList = forwardRef<HTMLElement, MovementListProps>(
             <DataQualityNotice content={dataQualityNotice} />
           </div>
         )}
-      </section>
+      </main>
     );
   },
 );

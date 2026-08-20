@@ -42,7 +42,7 @@ export const CategoryBreakdown = ({ items, onSelectCategory }: CategoryBreakdown
           onClick={() => setIsExpanded((current) => !current)}
         >
           <span className={styles.categoryBreakdownToggleText}>
-            <span className={styles.categoryBreakdownTitle}>Desglose por categoría</span>
+            <h2 className={styles.categoryBreakdownTitle}>Desglose por categoría</h2>
             {!isExpanded && collapsedHint && (
               <span className={styles.categoryBreakdownHint}>{collapsedHint}</span>
             )}
