@@ -1,0 +1,38 @@
+.summary-header-tiles {
+  display: flex;
+  gap: 8px;
+}
+
+.summary-header-tiles__tile {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.summary-header-tiles__tile--period {
+  flex: none;
+}
+
+.summary-header-tiles__tile-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.summary-header-tiles__label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.summary-header-tiles__value {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  font-variant-numeric: var(--zf-font-numeric);
+  white-space: nowrap;
+}

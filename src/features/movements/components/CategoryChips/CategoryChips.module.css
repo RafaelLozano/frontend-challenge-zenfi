@@ -1,0 +1,39 @@
+.category-chips {
+  display: flex;
+  gap: 8px;
+  padding: 0 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.category-chips__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--zf-border);
+  border-radius: var(--zf-radius-pill);
+  background: #fff;
+  color: var(--zf-text-chip);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.category-chips__chip:focus-visible {
+  outline: 2px solid var(--zf-primary);
+  outline-offset: 2px;
+}
+
+.category-chips__chip--active {
+  border-color: var(--zf-primary);
+  background: var(--zf-primary);
+  color: #fff;
+}

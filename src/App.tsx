@@ -1,18 +1,18 @@
 import movimientosRaw from './data/movimientos.json';
 import { PhoneShell } from './components/PhoneShell/PhoneShell';
-import { getSelectableCategoriaOptions } from './features/movimientos/catalog/categorias';
-import { MovimientosPage } from './features/movimientos/MovimientosPage';
-import { parseMovimientosFile } from './features/movimientos/utils/parseMovimientosFile';
+import { getSelectableCategoryOptions } from './features/movements/catalog/categories';
+import { MovementsPage } from './features/movements/MovementsPage';
+import { parseMovementsFile } from './features/movements/utils/parseMovementsFile';
 
-const { periodo, movimientos } = parseMovimientosFile(movimientosRaw);
-const categorias = getSelectableCategoriaOptions();
+const { period, movements } = parseMovementsFile(movimientosRaw);
+const categoryOptions = getSelectableCategoryOptions();
 
 const App = () => (
   <PhoneShell>
-    <MovimientosPage
-      initialMovimientos={movimientos}
-      periodo={periodo}
-      categorias={categorias}
+    <MovementsPage
+      initialMovements={movements}
+      period={period}
+      categoryOptions={categoryOptions}
     />
   </PhoneShell>
 );

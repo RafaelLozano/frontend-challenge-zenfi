@@ -1,0 +1,33 @@
+.movements-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.movements-empty-state__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: #efe7ff;
+  color: var(--zf-primary);
+}
+
+.movements-empty-state__title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--zf-ink);
+}
+
+.movements-empty-state__body {
+  margin: 0;
+  font-size: 13px;
+  color: var(--zf-text-2);
+  max-width: 260px;
+}
