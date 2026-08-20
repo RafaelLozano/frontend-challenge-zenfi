@@ -1,5 +1,14 @@
 node_modules
 dist
+.atl
+.agent/*
+.engram
+design.md
+.agents/*
+.cursor/*
+plans/*
+scripts/
+skills-lock.json
 dist-ssr
 *.local
 
