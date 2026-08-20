@@ -1,6 +1,8 @@
 .category-chips {
   display: flex;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
   padding: 0 18px;
   overflow-x: auto;
   scrollbar-width: none;
