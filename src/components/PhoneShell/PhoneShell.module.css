@@ -1,0 +1,20 @@
+.phone-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: var(--zf-bg);
+}
+
+@media (min-width: 460px) {
+  .phone-shell {
+    width: 100%;
+    max-width: 430px;
+    min-height: unset;
+    height: min(874px, 100dvh);
+    border-radius: var(--zf-radius-3xl);
+    box-shadow: 0 40px 80px rgba(20, 9, 58, 0.18);
+  }
+}
