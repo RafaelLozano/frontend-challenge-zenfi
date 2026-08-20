@@ -1,0 +1,16 @@
+.movimientos-page {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.movimientos-page__brand {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}

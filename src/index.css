@@ -1,7 +1,38 @@
 :root {
+  color-scheme: dark;
+
+  --color-bg: #0b0f14;
+  --color-surface: #121820;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e8edf4;
+  --color-text-muted: #8b9aaf;
+  --color-accent: #34d399;
+  --color-income: #34d399;
+  --color-expense: #f8fafc;
+  --color-warning-bg: rgba(251, 191, 36, 0.12);
+  --color-warning-bg-subtle: rgba(251, 191, 36, 0.06);
+  --color-warning-border: rgba(251, 191, 36, 0.35);
+  --color-warning-text: #fcd34d;
+  --color-pending-bg: rgba(129, 140, 248, 0.15);
+  --color-pending-text: #a5b4fc;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
-  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -11,4 +42,15 @@
 body {
   margin: 0;
   min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button,
+select {
+  font: inherit;
 }

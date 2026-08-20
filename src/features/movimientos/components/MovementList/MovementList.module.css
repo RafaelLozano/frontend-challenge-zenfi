@@ -1,0 +1,29 @@
+.movement-list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.movement-list__header {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.movement-list__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.movement-list__subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.movement-list__items {
+  display: grid;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
